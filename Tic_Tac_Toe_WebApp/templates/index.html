@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+        </div>
+    </div>
+    <div id="scores">
+        <h1>{{ title }}</h1>
+        <table>
+            <tr>
+                <td><h4><b>X Score: </b>{{ Xscore }}</h4></td>
+                <td><h4><b>O Score: </b>{{ Oscore }}</h4></td>
+            </tr>
+            <tr>
+                <td><b>Player </b>{{ player }}<b>'s turn </b></td>
+                <td>{{ message }}</td>
+            </tr>
+        </table>
+    </div>
+    <table>
+        <form action="{{ url_for('_pass') }}" method="post">
+            <tr>
+                <td><input type="submit" value="1" name="token" /></td>
+                <td><input type="submit" value="2" name="token" /></td>
+                <td><input type="submit" value="3" name="token" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="4" name="token" /></td>
+                <td><input type="submit" value="5" name="token" /></td>
+                <td><input type="submit" value="6" name="token" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="7" name="token" /></td>
+                <td><input type="submit" value="8" name="token" /></td>
+                <td><input type="submit" value="9" name="token" /></td>
+            </tr>
+            <input type="submit" value="Reset" name="token" />
+            <input type="submit" value="End Game" name="token" />
+        </form>
+    </table>
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; {{ year }} - all rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
